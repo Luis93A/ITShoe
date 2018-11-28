@@ -1,4 +1,4 @@
-#include <TimerOne.h>
+#include <TimerOne.h> //IT IS NECESSARY TO DOWNLOAD THE LIBRARY TIMERONE
 #include <SoftwareSerial.h>
 
 typedef struct{ uint16_t count;
