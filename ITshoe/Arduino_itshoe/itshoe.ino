@@ -79,7 +79,7 @@ void timerIsr(void)
  cipSend +="\r\n";
  
  esp8266.print(cipSend);
- delayMicroseconds(10000);
+ delayMicroseconds(1000);
 
  //String Force_data = cc + "," + a0 + ","+ a1 + ","+a2  + ","+ a3  + ","+ a4  + ","+ a5  +","+  a6 +","+  a7 +","+ "A";
 
@@ -124,9 +124,9 @@ String sendData(String command, const int timeout, boolean debug)
 int safeAnalogRead(int pin)
 {
   int x = analogRead(pin);  // make an initial reading to set up the ADC
-  delayMicroseconds(1) ;           // let the ADC stabilize
+  delayMicroseconds(250) ;           // let the ADC stabilize
   x = analogRead(pin);      // toss the first reading and take one we will keep
-  delayMicroseconds(1) ;            // delay again to be friendly to future readings
+  delayMicroseconds(100) ;            // delay again to be friendly to future readings
   return x;
   
 }
